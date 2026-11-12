@@ -1,0 +1,160 @@
+{
+  "id": "f0fe8224-347b-4e00-bf1d-86881baacbdd",
+  "version": "3.0",
+  "name": "New Project",
+  "url": "http://www.google.com",
+  "urls": [
+    "http://www.google.com"
+  ],
+  "plugins": [],
+  "suites": [
+    {
+      "id": "bb115e52-745a-4420-a138-417957a31038",
+      "name": "New Suite",
+      "parallel": false,
+      "persistSession": false,
+      "tests": [
+        "6dbc97ce-2d17-492e-a4d8-3354f64c96e1"
+      ],
+      "timeout": 30000
+    }
+  ],
+  "tests": [
+    {
+      "id": "6dbc97ce-2d17-492e-a4d8-3354f64c96e1",
+      "name": "New Test",
+      "commands": [
+        {
+          "command": "click",
+          "target": "",
+          "value": "",
+          "id": "5a431251-901e-40d5-b8bb-df2d725b372d"
+        }
+      ]
+    },
+    {
+      "id": "f6c09aa3-737d-4994-bd56-bb26f33ece42",
+      "name": "PesquisarWebDriver",
+      "commands": [
+        {
+          "id": "4977c7f1-9f53-4fa8-b76b-807f52dbcfac",
+          "command": "open",
+          "target": "https://duckduckgo.com/?q=Selenium+WebDriver",
+          "value": ""
+        },
+        {
+          "command": "waitForElementPresent",
+          "target": "css=[data-testid=\"result\"]",
+          "value": "10000",
+          "id": "1cea1d01-201d-42f3-8855-884ee7332828"
+        },
+        {
+          "command": "assertElementPresent",
+          "target": "css=[data-testid=\"result\"]",
+          "value": "",
+          "id": "a7ba0599-8bd9-4bf4-a44d-210dab94b800"
+        }
+      ]
+    },
+    {
+      "id": "6433f27f-efbe-423a-b97c-1aa6dcdb1295",
+      "name": "ValidarSiteOficialSelenium",
+      "commands": [
+        {
+          "id": "d6228f1d-344e-4f03-a453-cbcf4e619be6",
+          "command": "open",
+          "target": "https://example.com/",
+          "value": ""
+        },
+        {
+          "command": "pause",
+          "target": "3000",
+          "value": "",
+          "id": "2960ea49-4a63-4d41-96c1-f43cc8f9ee11",
+          "comment": ""
+        },
+        {
+          "command": "assertTitle",
+          "target": "Example Domain",
+          "value": "",
+          "id": "ff4807ff-88df-49a0-bf81-5fb6652106b7"
+        },
+        {
+          "command": "assertElementPresent",
+          "target": "css=a",
+          "value": "",
+          "id": "77974a8a-3790-40a5-9b18-a691d339298c"
+        },
+        {
+          "command": "click",
+          "target": "linkText=Learn more",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "42fe030a-68e3-4dd4-8483-84d0e08c270c",
+          "targets": [
+            [
+              "linkText=Learn more",
+              "linkText"
+            ],
+            [
+              "css=a",
+              "css:finder"
+            ],
+            [
+              "xpath=(//a[contains(text(),'Learn more')])[1]",
+              "xpath:link"
+            ],
+            [
+              "xpath=(//a[contains(@href, 'https://iana.org/help/example-domains')])[1]",
+              "xpath:href"
+            ],
+            [
+              "xpath=//a[contains(.,'Learn more')]",
+              "xpath:innerText"
+            ]
+          ]
+        },
+        {
+          "command": "executeScript",
+          "target": "return window.location.href;",
+          "value": "urlAtual",
+          "id": "7ff6a095-64c6-4dd4-a545-6a955b1a78b8"
+        },
+        {
+          "command": "assert",
+          "target": "urlAtual",
+          "value": "https://www.iana.org/help/example-domains",
+          "id": "585f23b7-bfbb-47ca-8146-fe125bf6305a"
+        },
+        {
+          "command": "executeScript",
+          "target": "window.history.back();",
+          "value": "",
+          "id": "84a1ffd1-b6e2-4e52-9064-27a3f9fea119"
+        },
+        {
+          "command": "pause",
+          "target": "2000",
+          "value": "10000",
+          "id": "e27749e1-b59e-40a3-81e9-13b054b0d509"
+        },
+        {
+          "command": "assertTitle",
+          "target": "Example Domain",
+          "value": "",
+          "id": "cfd67524-dc44-45b6-9af0-5aefcd3e4700",
+          "comment": ""
+        }
+      ]
+    }
+  ],
+  "snapshot": {
+    "dependencies": {},
+    "tests": [],
+    "jest": {
+      "extraGlobals": []
+    }
+  }
+}
